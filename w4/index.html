@@ -6,9 +6,9 @@
   <meta name="author" content="Breanna Rayburn">
   <meta name="description"
     content="Explore Checkpoint Nexus for the latest game reviews, news, and tips, offering engaging insights into the gaming world.">
-  <title>Home</title>
+  <title>Week 4 css group work</title>
   <link rel="icon" href="joystick-favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 
 <body>
@@ -163,14 +163,62 @@
           </details>
         </aside>
       </section>
+      <section>
+        <h3><strong>Space Blasters</strong>: Galactic Showdown</h3>
+        <aside>
+          <details>
+            <summary><strong>Button Combinations:</strong> Outblast the Competition!</summary>
+            <p>Use these button combinations to unlock powerful attacks and abilities:</p>
+            <table>
+              <caption>Button Combinations for Supreme Blasting Power</caption>
+              <thead>
+                <tr>
+                  <th>Move</th>
+                  <th>Button Combination</th>
+                  <th>Bonus Effect</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Star Burst</strong></td>
+                  <td>Blue, Red, Green, Blue</td>
+                  <td><strong>Shield Boost!</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Nova Pulse</strong></td>
+                  <td>Red, Green, Green, Yellow</td>
+                  <td><strong>Extra Damage!</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Astro Smash</strong></td>
+                  <td>Yellow, Yellow, Blue, Red</td>
+                  <td><strong>Speed Burst!</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Comet Crash</strong></td>
+                  <td>Green, Blue, Red, Yellow</td>
+                  <td><strong>Double Points!</strong></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3">Practice these moves to dominate in <strong>"Space Blasters!"</strong></td>
+                </tr>
+              </tfoot>
+            </table>
+          </details>
+        </aside>
+      </section>
     </article>
 
     <hr>
 
+    <!-- HTTPbin is a site that allows us to use free api calls to test things like a form. We can use the post method and the post url to send over a POST request which is sending data of the form over to the site. The site then returns the request made from the form, which includes all the form data submitted. The "name" property in the inpt is important, beacuse that is how the server will mark which data comes from which part of the form.  -->
+
     <article id="contact">
       <h2>Get in Touch</h2>
       <p>Have questions, suggestions, or feedback? We'd love to hear from you!</p>
-      <form action="#" method="POST">
+      <form action="https://httpbin.org/post" method="POST">
         <fieldset>
           <legend><strong>Personal/Company Info</strong></legend>
           <p>
@@ -181,7 +229,41 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
           </p>
+        </fieldset>
 
+        <fieldset>
+          <legend><strong>Feedback Type</strong></legend>
+          <p>
+            <label for="feedback-type">Choose a topic:</label>
+            <select id="feedback-type" name="feedback_type">
+              <option value="review">Game Review</option>
+              <option value="news">Latest News</option>
+              <option value="tips">Tips & Tricks</option>
+              <option value="general">General Feedback</option>
+            </select>
+          </p>
+          <p>
+            <label>Platform preference (select all that apply):</label><br>
+            <input type="checkbox" id="pc" name="platform" value="PC">
+            <label for="pc">PC</label><br>
+            <input type="checkbox" id="console" name="platform" value="Console">
+            <label for="console">Console</label><br>
+            <input type="checkbox" id="mobile" name="platform" value="Mobile">
+            <label for="mobile">Mobile</label><br>
+          </p>
+          <p>
+            <label>How would you rate your gaming skill level?</label><br>
+            <input type="radio" id="beginner" name="skill_level" value="Beginner">
+            <label for="beginner">Beginner</label><br>
+            <input type="radio" id="intermediate" name="skill_level" value="Intermediate">
+            <label for="intermediate">Intermediate</label><br>
+            <input type="radio" id="expert" name="skill_level" value="Expert">
+            <label for="expert">Expert</label><br>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend><strong>Your Message</strong></legend>
           <p>
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
