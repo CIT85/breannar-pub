@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PALETTE */
+
+.color-1 {
+  background-color: #050404;
+}
+
+.color-2 {
+  background-color: #2e1c2b;
+}
+
+.color-3 {
+  background-color: #893168;
+}
+
+.color-4 {
+  background-color: #861373;
+}
+
+.color-5 {
+  background-color: #eaeaea;
+}
+
+/* GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* This seems weird to write but I need it so the pages without content can have the footer at the bottom */
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #050404;
+  color: #eaeaea;
+}
+
+main {
+  max-width: 100%;
+  margin: 1rem 1rem;
+}
+
+header,
+footer {
+  text-align: center;
+  background-color: #2e1c2b;
+  padding: 1rem 0;
+}
+
+header nav ul li {
+  display: inline;
+  padding: 0 0.5em;
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+h2 {
+  padding: 1rem 0;
+  color: #893168;
+}
+
+h3 {
+  padding: 0.5rem 0;
+}
+
+a {
+  color: #893168;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsla(323, 47%, 36%, 0.8);
+}
+
+a:visited {
+  color: #861373;
+}
+
+li {
+  list-style: none;
+}
+
+.trending {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  /* needed to add width or else they would be too big on a normal size screen and centered looks better than not */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-screams {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  /* needed to add width or else they would be too big on a normal size screen and centered looks better than not */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trending figure,
+.top-screams figure {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.trending figcaption,
+.top-screams figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #861373;
+  padding: 0.5rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.trending img,
+.top-screams img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.rating {
+  color: lightgray;
+}
+
+.star {
+  color: yellow;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+  padding: 8px 16px;
+  background-color: #2e1c2b;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: hsla(310, 24%, 15%, 0.9);
+}
+
+.caret {
+  font-size: 0.9em;
+  margin-left: 5px;
+  color: #555;
+}
+
+a:hover .caret {
+  color: #007bff;
+}
+
+/* I'm making this because some pages don't have a ton of content but I want their footers on the bottom */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* need the main content to grow to the size of the vh and fill in the remaining space */
+.content-to-push {
+  flex: 1;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.about-wrapper {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+/* wanted to center each section so the icons were in the middle and content looked ok */
+.about-wrapper section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* used for coloring svgs with stroke I couldn't find pngs that were the correct width and height without being blurry so I used svgs I hope thats okay. */
+.icon {
+  stroke: #861373;
+}
+
+.scream-people {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.featured-genres ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+.famous-faces ul {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.popular-genres {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+  text-align: left;
+  background-color: #2e1c2b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #861373;
+  color: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #893168;
+}
+
+tr:hover {
+  background-color: #861373;
+}
+
+form {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #eaeaea;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #893168;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  background-color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1em;
+  color: #eaeaea;
+  background-color: #861373;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+/* SMALL (mobile) */
+@media screen and (min-width: 576px) {
+  .featured-genres ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .famous-faces ul {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .top-screams {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MEDIUM */
+@media screen and (min-width: 768px) {
+  .trending {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .popular-genres {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .about-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* LARGE */
+@media screen and (min-width: 992px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    justify-content: center;
+    margin: 1rem auto;
+  }
+
+  .popular-genres {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
