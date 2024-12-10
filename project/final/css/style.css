@@ -54,6 +54,11 @@ footer {
   padding: 1rem 0;
 }
 
+footer {
+  background: #2e1c2b url("../../img/footer-background.png") 75%;
+  background-size: cover;
+}
+
 header nav ul li {
   display: inline;
   padding: 0 0.5em;
